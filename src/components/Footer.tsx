@@ -19,7 +19,7 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="text-lg font-semibold text-white"
+              className="font-heading text-lg font-semibold text-white"
             >
               RS Textiles
             </Link>

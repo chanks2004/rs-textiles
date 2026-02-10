@@ -18,7 +18,8 @@ const config: Config = {
         "gray-dark": "#111827",
       },
       fontFamily: {
-        sans: ["system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "Georgia", "serif"],
       },
     },
   },

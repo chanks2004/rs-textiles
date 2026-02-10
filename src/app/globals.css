@@ -15,3 +15,9 @@
 body {
   @apply bg-[#0f0f0f] text-gray-100 antialiased;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}

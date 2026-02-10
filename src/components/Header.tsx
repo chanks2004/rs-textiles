@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="text-xl md:text-2xl font-semibold text-white tracking-tight"
+            className="font-heading text-xl md:text-2xl font-semibold text-white tracking-tight"
           >
             RS Textiles
           </Link>

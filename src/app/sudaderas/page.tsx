@@ -28,7 +28,7 @@ const productionDetails = [
   "Personalización por bordado o serigrafía según cantidad y diseño.",
   "Mínimos desde 50 piezas según proveedor y tipo.",
   "Gran variedad de colores de muestra en el catálogo; no solo unos colores en específico.",
-  "Tiempos de entrega típicos: 10 a 21 días después de aprobación.",
+  "Contamos con tiempos muy competitivos de entrega.",
 ];
 
 export default function SudaderasPage() {
@@ -212,6 +212,9 @@ export default function SudaderasPage() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl">
+                Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
+              </p>
             </div>
           </div>
         </Container>

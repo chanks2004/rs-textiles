@@ -20,10 +20,22 @@ export default function CotizarPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
-    // Simular envío; en producción aquí iría la llamada a tu API o servicio de formularios
-    await new Promise((r) => setTimeout(r, 1500));
-    setSending(false);
-    setSent(true);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/cotizar", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Error al enviar");
+      setSent(true);
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "No se pudo enviar. Revisa tu conexión o intenta más tarde.");
+    } finally {
+      setSending(false);
+    }
   }
 
   if (sent) {

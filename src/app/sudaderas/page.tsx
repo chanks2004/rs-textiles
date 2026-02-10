@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Sudaderas con capucha y sin capucha, algodón y mezclas. Personalización por bordado o estampado. Cotiza tu pedido.",
 };
 
+export const dynamic = "force-dynamic";
+
 const types = [
   "Con capucha (hoodie)",
   "Sin capucha (crewneck)",

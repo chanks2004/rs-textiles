@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1e3a8a;
+  --primary-dark: #1e3a5f;
+  --cta: #dc2626;
+  --cta-dark: #b91c1c;
+  --surface: #111827;
+  --surface-dark: #0f0f0f;
+  --gray-dark: #111827;
+}
+
+body {
+  @apply bg-[#0f0f0f] text-gray-100 antialiased;
+}

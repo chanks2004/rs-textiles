@@ -19,4 +19,4 @@ export const FAQ_COTIZAR = [
     q: "¿Qué información necesito para cotizar?",
     a: "Tipo de prenda, cantidad aproximada, técnica que te interesa (serigrafía, DTF o bordado) y, si tienes, tu diseño o idea. Con eso te respondemos con precios y tiempos.",
   },
-] as const;
+];

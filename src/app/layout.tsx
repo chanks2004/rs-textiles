@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { OrganizationWebSiteJsonLd } from "@/components/seo/JsonLd";
 
 const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
@@ -19,22 +20,30 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rstextiless.com"),
   title: {
-    default: "RS Textiles | Playeras, Sudaderas y Gorras Personalizadas",
-    template: "%s | RS Textiles",
+    default: "Playeras Personalizadas en México | Cotiza en 1 Minuto - RZ Textiles",
+    template: "%s | RZ Textiles",
   },
   description:
-    "Intermediario textil que conecta marcas con fabricantes confiables. Playeras, sudaderas y gorras personalizadas. Cotiza directamente.",
+    "Cotiza playeras personalizadas en México con entrega rápida y precios de mayoreo. Serigrafía, DTF y bordado. Envíos a todo México. Recibe tu cotización hoy.",
   keywords: [
     "playeras personalizadas",
-    "sudaderas personalizadas",
-    "gorras personalizadas",
-    "cotización playeras",
-    "prendas personalizadas",
+    "playeras personalizadas México",
+    "cotizar playeras",
+    "serigrafía",
+    "DTF",
+    "bordado",
+    "envíos México",
   ],
   openGraph: {
     locale: "es_MX",
     type: "website",
+    siteName: "RZ Textiles",
+    url: "https://rstextiless.com",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   robots: "index, follow",
 };
@@ -47,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${cormorant.variable} ${outfit.variable}`}>
       <body className="min-h-screen flex flex-col font-sans antialiased">
+        <OrganizationWebSiteJsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

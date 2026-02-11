@@ -1,9 +1,27 @@
+import type { Metadata } from "next";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
+import { BreadcrumbListJsonLd } from "@/components/seo/JsonLd";
 import { images } from "@/lib/images";
+import { SITE_URL } from "@/lib/site";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Playeras Personalizadas en México | Cotiza en 1 Minuto - RZ Textiles",
+  description:
+    "Cotiza playeras personalizadas en México con entrega rápida y precios de mayoreo. Serigrafía, DTF y bordado. Envíos a todo México. Recibe tu cotización hoy.",
+  alternates: { canonical: SITE_URL + "/" },
+  openGraph: {
+    title: "Playeras Personalizadas en México | Cotiza en 1 Minuto - RZ Textiles",
+    description:
+      "Cotiza playeras personalizadas en México con entrega rápida y precios de mayoreo. Serigrafía, DTF y bordado. Envíos a todo México.",
+    url: SITE_URL + "/",
+    locale: "es_MX",
+  },
+  twitter: { card: "summary_large_image", title: "Playeras Personalizadas en México | RZ Textiles" },
+};
 
 const steps = [
   {
@@ -77,6 +95,7 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
+      <BreadcrumbListJsonLd items={[{ name: "Inicio", path: "/" }]} />
       <section className="py-16 md:py-24 lg:py-32">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -85,7 +104,7 @@ export default function HomePage() {
                 Prendas personalizadas
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-                Playeras, sudaderas y gorras para tu marca
+                Playeras personalizadas en México
               </h1>
               <p className="mt-6 text-xl md:text-2xl text-gray-400 leading-relaxed">
                 Cotiza directamente con fabricantes confiables

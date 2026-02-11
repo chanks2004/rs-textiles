@@ -2,12 +2,24 @@ import type { Metadata } from "next";
 import NextImage from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { BreadcrumbListJsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { images } from "@/lib/images";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Playeras personalizadas",
+  title: "Playeras Personalizadas | Serigrafía, DTF y Bordado en México",
   description:
-    "Playeras personalizadas: tipos de tela, serigrafía, bordado e impresión digital. Cotiza desde 50 piezas.",
+    "Playeras personalizadas para marcas, negocios y eventos. Elige técnica, calidad y tiempos de entrega. Cotiza fácil con RZ Textiles y recibe atención rápida.",
+  alternates: { canonical: SITE_URL + "/playeras" },
+  openGraph: {
+    title: "Playeras Personalizadas | Serigrafía, DTF y Bordado en México",
+    description:
+      "Playeras personalizadas para marcas, negocios y eventos. Elige técnica, calidad y tiempos de entrega.",
+    url: SITE_URL + "/playeras",
+    locale: "es_MX",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const fabricTypes = [
@@ -46,8 +58,10 @@ const productionDetails = [
 export default function PlayerasPage() {
   return (
     <>
+      <BreadcrumbListJsonLd items={[{ name: "Inicio", path: "/" }, { name: "Playeras personalizadas", path: "/playeras" }]} />
       <section className="py-16 md:py-24">
         <Container>
+          <Breadcrumbs items={[{ label: "Playeras personalizadas", path: "/playeras" }]} />
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">

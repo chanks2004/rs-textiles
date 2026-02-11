@@ -16,10 +16,12 @@ const garmentTypes = [
 export default function CotizarPage() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
+    setError(null);
     const form = e.currentTarget;
     const formData = new FormData(form);
 
@@ -32,7 +34,9 @@ export default function CotizarPage() {
       if (!res.ok) throw new Error(data.error || "Error al enviar");
       setSent(true);
     } catch (err) {
-      alert(err instanceof Error ? err.message : "No se pudo enviar. Revisa tu conexión o intenta más tarde.");
+      setError(
+        "Hubo un error al enviar tu solicitud. Por favor escríbenos directo a: contactorstextiles@gmail.com o mándanos un mensaje por WhatsApp."
+      );
     } finally {
       setSending(false);
     }
@@ -223,6 +227,34 @@ export default function CotizarPage() {
                 PDF, PNG, JPG, AI o EPS. Máx. 10 MB.
               </p>
             </div>
+
+            {error && (
+              <div className="pt-2 rounded-xl border border-red-800 bg-red-950/40 px-4 py-3 text-sm text-red-100 space-y-3">
+                <p>{error}</p>
+                <div className="flex flex-wrap gap-3 items-center">
+                  <a
+                    href="mailto:contactorstextiles@gmail.com"
+                    className="underline underline-offset-2"
+                  >
+                    Escribir por email
+                  </a>
+                  <Button
+                    href={
+                      "https://wa.me/?text=" +
+                      encodeURIComponent(
+                        "Hola, quiero cotizar playeras personalizadas desde la página web."
+                      )
+                    }
+                    variant="secondary"
+                    className="inline-flex items-center gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Escribir por WhatsApp
+                  </Button>
+                </div>
+              </div>
+            )}
 
             <div className="pt-4">
               <Button

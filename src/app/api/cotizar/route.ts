@@ -1,11 +1,20 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const EMAIL_TO = process.env.EMAIL_COTIZACIONES || "contactorstextiles@gmail.com";
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("Missing RESEND_API_KEY env variable");
+  }
+  if (!process.env.EMAIL_COTIZACIONES) {
+    throw new Error("Missing EMAIL_COTIZACIONES env variable");
+  }
+
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const emailTo = process.env.EMAIL_COTIZACIONES;
+
     const formData = await request.formData();
 
     const nombre = (formData.get("nombre") as string) || "";
@@ -54,14 +63,6 @@ export async function POST(request: Request) {
       <p>${(comentarios || "(sin comentarios)").replace(/\n/g, "<br>")}</p>
     `;
 
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY no está configurada");
-      return NextResponse.json(
-        { error: "Servicio de email no configurado" },
-        { status: 500 }
-      );
-    }
-
     const file = formData.get("diseno") as File | null;
     const attachments =
       file && file.size > 0
@@ -74,8 +75,8 @@ export async function POST(request: Request) {
         : undefined;
 
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || "RS Textiles <onboarding@resend.dev>",
-      to: EMAIL_TO,
+      from: "RS Textiles <contacto@rstextiless.com>",
+      to: emailTo,
       subject: `Cotización: ${tipoPrenda} - ${nombre}`,
       text: texto,
       html,

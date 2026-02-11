@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/gorras", label: "Gorras" },
   { href: "/como-funciona", label: "Cómo funciona" },
   { href: "/nosotros", label: "Nosotros" },
+  { href: "/faq", label: "Preguntas frecuentes" },
   { href: "/contacto", label: "Contacto" },
 ];
 

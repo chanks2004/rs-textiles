@@ -74,8 +74,10 @@ export async function POST(request: Request) {
           ]
         : undefined;
 
+    const fromAddress = process.env.RESEND_FROM_EMAIL || "RS Textiles <contacto@rstextiless.com>";
+
     const { error } = await resend.emails.send({
-      from: "RS Textiles <contacto@rstextiless.com>",
+      from: fromAddress,
       to: emailTo,
       subject: `Cotización: ${tipoPrenda} - ${nombre}`,
       text: texto,

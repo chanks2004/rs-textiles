@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { images } from "@/lib/images";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Sudaderas personalizadas",
   description:
     "Sudaderas con capucha y sin capucha, algodón y mezclas. Personalización por bordado o estampado. Cotiza tu pedido.",
 };
-
-export const dynamic = "force-dynamic";
 
 const types = [
   "Con capucha (hoodie)",

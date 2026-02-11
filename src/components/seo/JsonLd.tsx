@@ -49,14 +49,14 @@ export function BreadcrumbListJsonLd({ items }: { items: BreadcrumbItem[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
-export function FAQPageJsonLd({ faqs }: { faqs: readonly { q: string; a: string }[] }) {
+export function FAQPageJsonLd({ faqs }: { faqs: { question: string; answer: string }[] }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;

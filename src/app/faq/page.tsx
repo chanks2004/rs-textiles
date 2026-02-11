@@ -42,9 +42,9 @@ export default function FAQPage() {
           </p>
           <ul className="space-y-8 max-w-2xl">
             {FAQ_COTIZAR.map((faq) => (
-              <li key={faq.q} className="border-b border-gray-800 pb-8 last:border-0">
-                <h2 className="text-xl font-semibold text-white">{faq.q}</h2>
-                <p className="mt-3 text-gray-400">{faq.a}</p>
+              <li key={faq.question} className="border-b border-gray-800 pb-8 last:border-0">
+                <h2 className="text-xl font-semibold text-white">{faq.question}</h2>
+                <p className="mt-3 text-gray-400">{faq.answer}</p>
               </li>
             ))}
           </ul>

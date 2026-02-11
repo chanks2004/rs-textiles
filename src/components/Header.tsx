@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/playeras", label: "Playeras" },
   { href: "/sudaderas", label: "Sudaderas" },
   { href: "/gorras", label: "Gorras" },
+  { href: "/blog", label: "Blog" },
   { href: "/como-funciona", label: "Cómo funciona" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/faq", label: "Preguntas frecuentes" },

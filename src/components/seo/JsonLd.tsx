@@ -61,3 +61,36 @@ export function FAQPageJsonLd({ faqs }: { faqs: { question: string; answer: stri
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
+
+export function ArticleJsonLd({
+  urlPath,
+  title,
+  description,
+  datePublished,
+}: {
+  urlPath: string;
+  title: string;
+  description: string;
+  datePublished: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished,
+    dateModified: datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${urlPath}`,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "RZ Textiles",
+    },
+  };
+
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+

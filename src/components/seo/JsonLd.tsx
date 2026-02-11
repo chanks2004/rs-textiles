@@ -49,7 +49,7 @@ export function BreadcrumbListJsonLd({ items }: { items: BreadcrumbItem[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
-export function FAQPageJsonLd({ faqs }: { faqs: { q: string; a: string }[] }) {
+export function FAQPageJsonLd({ faqs }: { faqs: readonly { q: string; a: string }[] }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

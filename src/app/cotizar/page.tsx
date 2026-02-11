@@ -238,20 +238,19 @@ export default function CotizarPage() {
                   >
                     Escribir por email
                   </a>
-                  <Button
+                  <a
                     href={
                       "https://wa.me/?text=" +
                       encodeURIComponent(
                         "Hola, quiero cotizar playeras personalizadas desde la página web."
                       )
                     }
-                    variant="secondary"
-                    className="inline-flex items-center gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-base font-medium bg-gray-800 text-white hover:bg-gray-700 border border-gray-700 transition-colors"
                   >
                     Escribir por WhatsApp
-                  </Button>
+                  </a>
                 </div>
               </div>
             )}

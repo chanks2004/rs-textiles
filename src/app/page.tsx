@@ -10,18 +10,18 @@ import { SITE_URL } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Playeras Personalizadas en México | Cotiza en 1 Minuto - RZ Textiles",
+  title: "Tu pedido, nuestra red | Broker textil para marcas - RS Textiles",
   description:
-    "Cotiza playeras personalizadas en México con entrega rápida y precios de mayoreo. Serigrafía, DTF y bordado. Envíos a todo México. Recibe tu cotización hoy.",
+    "Playeras, gorras, sudaderas y más para tu marca. Red de distribuidores en varios países. Nosotros conseguimos proveedor, muestras y logística; tú solo dices qué quieres.",
   alternates: { canonical: SITE_URL + "/" },
   openGraph: {
-    title: "Playeras Personalizadas en México | Cotiza en 1 Minuto - RZ Textiles",
+    title: "Tu pedido, nuestra red | Broker textil para marcas - RS Textiles",
     description:
-      "Cotiza playeras personalizadas en México con entrega rápida y precios de mayoreo. Serigrafía, DTF y bordado. Envíos a todo México.",
+      "Playeras, gorras, sudaderas y más para tu marca. Red de distribuidores en varios países. Nosotros conseguimos y nos encargamos de la logística.",
     url: SITE_URL + "/",
     locale: "es_MX",
   },
-  twitter: { card: "summary_large_image", title: "Playeras Personalizadas en México | RZ Textiles" },
+  twitter: { card: "summary_large_image", title: "Tu pedido, nuestra red | RS Textiles" },
 };
 
 const steps = [
@@ -100,35 +100,23 @@ export default function HomePage() {
       {/* Hero */}
       <section className="py-20 md:py-28 lg:py-36">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-            <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4">
-                Prendas personalizadas
-              </p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-tight tracking-tight">
-                Playeras personalizadas en México
-              </h1>
-              <p className="mt-6 text-xl md:text-2xl text-muted leading-relaxed">
-                Soluciones textiles para marcas y empresas. Cotiza con fabricantes confiables y recibe tu pedido a tiempo.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Button href="/cotizar" variant="primary">
-                  Solicitar cotización
-                </Button>
-                <Button href="/playeras" variant="outline">
-                  Ver productos
-                </Button>
-              </div>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light shadow-card">
-              <NextImage
-                src={images.hero}
-                alt="Playeras y prendas personalizadas"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+          <div className="max-w-3xl">
+            <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+              Broker textil para tu marca
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-tight tracking-tight">
+              Dinos qué quieres para tu marca. Nosotros lo conseguimos.
+            </h1>
+            <p className="mt-6 text-xl md:text-2xl text-muted leading-relaxed">
+              Playeras, gorras, sudaderas o lo que imagines: trabajamos con una red de distribuidores en distintos países y continentes. Nos encargamos de buscar proveedor, muestras, plazos y logística; tú solo cuéntanos telas, colores e idea y ahorramos tiempo por ti.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button href="/cotizar" variant="primary">
+                Solicitar cotización
+              </Button>
+              <Button href="/playeras" variant="outline">
+                Ver productos
+              </Button>
             </div>
           </div>
         </Container>

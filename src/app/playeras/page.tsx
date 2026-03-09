@@ -76,10 +76,10 @@ export default function PlayerasPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
               <NextImage
-                src={images.playerasHero}
-                alt="Playeras personalizadas"
+                src={images.playerasColores}
+                alt="Playeras con gran variedad de colores en catálogo"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -88,23 +88,14 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
+      <section className="py-12 md:py-16 bg-primary">
         <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
             Playeras en detalle
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto text-center mb-12">
-            Tenemos de todo tipo de calidad: desde playeras económicas para eventos hasta playeras de alta calidad (por ejemplo 320 gsm). Ofrecemos gran variedad de colores de muestra en el catálogo, no solo unos colores en específico. Cuello redondo, manga corta y tejido suave para personalizar. <strong className="text-navy">Tu creatividad la hacemos realidad: cualquier producto que tengas en mente lo podemos hacer realidad.</strong>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto text-center">
+            Tenemos de todo tipo de calidad: desde playeras económicas para eventos hasta playeras de alta calidad (por ejemplo 320 gsm). Ofrecemos gran variedad de colores de muestra en el catálogo, no solo unos colores en específico. Cuello redondo, manga corta y tejido suave para personalizar. <strong className="text-white">Tu creatividad la hacemos realidad: cualquier producto que tengas en mente lo podemos hacer realidad.</strong>
           </p>
-          <div className="relative aspect-[2/1] md:aspect-[21/9] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-            <NextImage
-              src={images.playerasColores}
-              alt="Playeras con gran variedad de colores en catálogo"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 896px"
-            />
-          </div>
         </Container>
       </section>
 
@@ -135,37 +126,26 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
+      <section className="py-12 md:py-16">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
-                Tipos de tela
-              </h2>
-              <ul className="space-y-3 max-w-2xl">
-                {fabricTypes.map((fabric) => (
-                  <li
-                    key={fabric}
-                    className="flex items-center gap-3 text-muted"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    {fabric}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-muted leading-relaxed max-w-2xl">
-                Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
-              </p>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-              <NextImage
-                src={images.playerasColores}
-                alt="Tipos de tela para playeras"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
+              Tipos de tela
+            </h2>
+            <ul className="space-y-3 max-w-2xl">
+              {fabricTypes.map((fabric) => (
+                <li
+                  key={fabric}
+                  className="flex items-center gap-3 text-muted"
+                >
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  {fabric}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-muted leading-relaxed max-w-2xl">
+              Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
+            </p>
           </div>
         </Container>
       </section>
@@ -204,32 +184,20 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
+      <section className="py-12 md:py-16 bg-primary">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
-                Detalles de producción
-              </h2>
-              <ul className="space-y-3 max-w-2xl">
-                {productionDetails.map((detail, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1.5" />
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-              <NextImage
-                src={images.playerasModelos[2]}
-                alt="Producción de playeras"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={90}
-              />
-            </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Detalles de producción
+            </h2>
+            <ul className="space-y-3 max-w-2xl">
+              {productionDetails.map((detail, i) => (
+                <li key={i} className="flex items-start gap-3 text-white/90">
+                  <span className="w-2 h-2 rounded-full bg-white shrink-0 mt-1.5" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
@@ -245,22 +213,25 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-primary">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle/80 border border-border-light p-8 md:p-12 text-center">
-            <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-primary border border-white/20 shadow-card p-8 md:p-12 text-center">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-navy">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
               ¿Listo para cotizar?
             </h2>
-            <p className="mt-4 text-muted">
+            <p className="mt-4 text-white/90">
               Envíanos tu idea y te respondemos con precios y tiempos.
             </p>
             <div className="mt-8">
-              <Button href="/cotizar" variant="primary">
+              <a
+                href="/cotizar"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold bg-white text-primary hover:bg-white/95 transition-colors shadow-sm"
+              >
                 Cotizar playeras
-              </Button>
+              </a>
             </div>
           </div>
         </Container>

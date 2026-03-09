@@ -164,22 +164,25 @@ export default function GorrasPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-primary">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle/80 border border-border-light p-8 md:p-12 text-center">
-            <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-primary border border-white/20 shadow-card p-8 md:p-12 text-center">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-navy">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
               Cotiza tus gorras
             </h2>
-            <p className="mt-4 text-muted">
+            <p className="mt-4 text-white/90">
               Envíanos estilo, cantidad y tu logo; te respondemos con precios y muestras.
             </p>
             <div className="mt-8">
-              <Button href="/cotizar" variant="primary">
+              <a
+                href="/cotizar"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold bg-white text-primary hover:bg-white/95 transition-colors shadow-sm"
+              >
                 Cotizar gorras
-              </Button>
+              </a>
             </div>
           </div>
         </Container>

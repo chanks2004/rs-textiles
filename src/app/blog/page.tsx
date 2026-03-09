@@ -47,18 +47,18 @@ export default function BlogIndexPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="rounded-xl border border-border-light bg-white shadow-card p-6 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                className="rounded-xl bg-primary p-6 md:p-8 hover:bg-primary-dark transition-colors"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/90 mb-2">
                   {post.category}
                 </p>
-                <h2 className="text-lg md:text-xl font-semibold text-navy mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-white/90 transition-colors">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="text-sm text-muted mb-4">{post.description}</p>
-                <p className="text-xs text-muted mb-4">
+                <p className="text-sm text-white/90 mb-4">{post.description}</p>
+                <p className="text-xs text-white/80 mb-4">
                   {new Date(post.date).toLocaleDateString("es-MX", {
                     year: "numeric",
                     month: "short",
@@ -67,7 +67,7 @@ export default function BlogIndexPage() {
                 </p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80"
+                  className="inline-flex items-center text-sm font-semibold text-white hover:text-white/90"
                 >
                   Leer artículo completo
                   <span className="ml-1" aria-hidden>

@@ -71,22 +71,25 @@ export default function ComoFuncionaPage() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-primary">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-white border border-border-light shadow-card p-8 md:p-12 text-center">
-            <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-primary border border-white/20 shadow-card p-8 md:p-12 text-center">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-navy">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
               ¿Listo para empezar?
             </h2>
-            <p className="mt-4 text-muted">
+            <p className="mt-4 text-white/90">
               Envíanos los datos de tu pedido y te respondemos con una cotización.
             </p>
             <div className="mt-8">
-              <Button href="/cotizar" variant="primary">
+              <a
+                href="/cotizar"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold bg-primary-dark text-white hover:bg-primary-dark/90 transition-all duration-200 shadow-sm ring-2 ring-white/30"
+              >
                 Solicitar cotización
-              </Button>
+              </a>
             </div>
           </div>
         </Container>

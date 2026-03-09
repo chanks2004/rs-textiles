@@ -52,10 +52,10 @@ export default function SudaderasPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
               <NextImage
-                src={images.sudaderasHero}
-                alt="Sudaderas personalizadas"
+                src={images.sudaderasColores}
+                alt="Sudaderas con gran variedad de colores en catálogo"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -64,24 +64,14 @@ export default function SudaderasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
+      <section className="py-12 md:py-16 bg-primary">
         <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
             Sudaderas en detalle
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto text-center mb-12">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto text-center">
             Ofrecemos gran variedad de colores de muestra en el catálogo, no solo unos colores en específico. Todas con capucha, bolsillo canguro y acabado de calidad.
           </p>
-          <div className="relative aspect-[4/3] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-            <NextImage
-              src={images.sudaderasColores}
-              alt="Sudaderas con gran variedad de colores en catálogo"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 896px"
-              quality={90}
-            />
-          </div>
         </Container>
       </section>
 
@@ -113,16 +103,16 @@ export default function SudaderasPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#0f0f0f]">
+      <section className="py-16 md:py-24 bg-primary">
         <Container>
           <div className="text-center mb-14">
-            <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Calidad premium
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
               Materiales a la vista
             </h2>
-            <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto">
               Tejidos que elegimos: desde French Terry y felpa cepillada hasta mezclas con acabado tipo velvet. Cada detalle pensado para comodidad y durabilidad.
             </p>
           </div>
@@ -157,117 +147,85 @@ export default function SudaderasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
-        <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
-                Tipos de sudaderas
-              </h2>
-              <ul className="space-y-3 max-w-2xl">
-                {types.map((type) => (
-                  <li key={type} className="flex items-center gap-3 text-gray-400">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    {type}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-              <NextImage
-                src={images.sudaderasTypes}
-                alt="Tipos de sudaderas"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={90}
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
-
       <section className="py-12 md:py-16">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light order-2 lg:order-1">
-              <NextImage
-                src={images.sudaderasModelos[1]}
-                alt="Materiales de sudaderas"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
-                Materiales
-              </h2>
-              <ul className="space-y-3 max-w-2xl">
-                {materials.map((material) => (
-                  <li
-                    key={material}
-                    className="flex items-center gap-3 text-gray-400"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    {material}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl">
-                Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
-              </p>
-            </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
+              Tipos de sudaderas
+            </h2>
+            <ul className="space-y-3 max-w-2xl">
+              {types.map((type) => (
+                <li key={type} className="flex items-center gap-3 text-gray-400">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  {type}
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
+      <section className="py-12 md:py-16 bg-primary">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
-                Detalles de producción
-              </h2>
-              <ul className="space-y-3 max-w-2xl">
-                {productionDetails.map((detail, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-400">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1.5" />
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
-              <NextImage
-                src={images.sudaderasModelos[2]}
-                alt="Producción de sudaderas"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={90}
-              />
-            </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Materiales
+            </h2>
+            <ul className="space-y-3 max-w-2xl">
+              {materials.map((material) => (
+                <li
+                  key={material}
+                  className="flex items-center gap-3 text-white/90"
+                >
+                  <span className="w-2 h-2 rounded-full bg-white shrink-0" />
+                  {material}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-white/90 leading-relaxed max-w-2xl">
+              Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
+            </p>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16 bg-white">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-white border border-border-light p-8 md:p-12 text-center">
-            <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
+              Detalles de producción
+            </h2>
+            <ul className="space-y-3 max-w-2xl">
+              {productionDetails.map((detail, i) => (
+                <li key={i} className="flex items-start gap-3 text-gray-400">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1.5" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24 bg-primary">
+        <Container>
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-primary border border-white/20 shadow-card p-8 md:p-12 text-center">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-navy">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
               Cotiza tus sudaderas
             </h2>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-white/90">
               Cuéntanos tipo, cantidad y diseño; te enviamos cotización sin compromiso.
             </p>
             <div className="mt-8">
-              <Button href="/cotizar" variant="primary">
+              <a
+                href="/cotizar"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold bg-white text-primary hover:bg-white/95 transition-colors shadow-sm"
+              >
                 Cotizar sudaderas
-              </Button>
+              </a>
             </div>
           </div>
         </Container>

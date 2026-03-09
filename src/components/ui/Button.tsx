@@ -11,11 +11,11 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-primary text-white hover:bg-primary-dark",
+    "bg-primary text-white hover:bg-primary-dark shadow-sm",
   secondary:
-    "bg-gray-800 text-white hover:bg-gray-700 border border-gray-700",
+    "bg-bg-subtle text-navy hover:bg-border-light border border-border-light",
   outline:
-    "border border-primary text-primary hover:bg-primary hover:text-white",
+    "border-2 border-primary text-primary hover:bg-primary hover:text-white",
 };
 
 export function Button({
@@ -27,7 +27,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center px-6 py-3 rounded-xl text-base font-medium transition-colors";
+    "inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold transition-all duration-200";
 
   if (href) {
     return (

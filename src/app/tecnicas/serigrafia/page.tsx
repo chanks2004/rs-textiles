@@ -37,10 +37,10 @@ export default function SerigrafiaPage() {
               { label: "Serigrafía en playeras", path: "/tecnicas/serigrafia" },
             ]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Serigrafía en playeras
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Ideal para grandes cantidades: mejor precio por volumen y gran durabilidad. Te explicamos ventajas, tiempos y cuándo conviene.
           </p>
           <Button href="/cotizar" variant="primary">

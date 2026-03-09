@@ -59,22 +59,22 @@ export default function PlayerasPage() {
   return (
     <>
       <BreadcrumbListJsonLd items={[{ name: "Inicio", path: "/" }, { name: "Playeras personalizadas", path: "/playeras" }]} />
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
           <Breadcrumbs items={[{ label: "Playeras personalizadas", path: "/playeras" }]} />
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+              <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
                 Playeras
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight">
                 Playeras personalizadas
               </h1>
-              <p className="mt-6 text-xl text-gray-400 leading-relaxed">
+              <p className="mt-6 text-xl text-muted leading-relaxed">
                 Diferentes tipos de tela y métodos de impresión para que tu marca luzca como quieres.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
               <NextImage
                 src={images.playerasHero}
                 alt="Playeras personalizadas"
@@ -88,15 +88,15 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-gray-800">
+      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
         <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 text-center">
             Playeras en detalle
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto text-center mb-12">
-            Tenemos de todo tipo de calidad: desde playeras económicas para eventos hasta playeras de alta calidad (por ejemplo 320 gsm). Ofrecemos gran variedad de colores de muestra en el catálogo, no solo unos colores en específico. Cuello redondo, manga corta y tejido suave para personalizar. <strong className="text-white">Tu creatividad la hacemos realidad: cualquier producto que tengas en mente lo podemos hacer realidad.</strong>
+          <p className="text-lg text-muted max-w-2xl mx-auto text-center mb-12">
+            Tenemos de todo tipo de calidad: desde playeras económicas para eventos hasta playeras de alta calidad (por ejemplo 320 gsm). Ofrecemos gran variedad de colores de muestra en el catálogo, no solo unos colores en específico. Cuello redondo, manga corta y tejido suave para personalizar. <strong className="text-navy">Tu creatividad la hacemos realidad: cualquier producto que tengas en mente lo podemos hacer realidad.</strong>
           </p>
-          <div className="relative aspect-[2/1] md:aspect-[21/9] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+          <div className="relative aspect-[2/1] md:aspect-[21/9] max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
             <NextImage
               src={images.playerasColores}
               alt="Playeras con gran variedad de colores en catálogo"
@@ -110,17 +110,17 @@ export default function PlayerasPage() {
 
       <section className="py-12 md:py-16">
         <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 text-center">
             Cómo se ven en persona
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto text-center mb-12">
+          <p className="text-lg text-muted max-w-2xl mx-auto text-center mb-12">
             Nuestras playeras en fotos reales. Corte clásico, cuello redondo y manga corta para un look profesional o casual.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {images.playerasModelos.map((src, i) => (
               <div
                 key={i}
-                className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-900 border border-gray-800"
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light"
               >
                 <NextImage
                   src={src}
@@ -135,29 +135,29 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-gray-800">
+      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
                 Tipos de tela
               </h2>
               <ul className="space-y-3 max-w-2xl">
                 {fabricTypes.map((fabric) => (
                   <li
                     key={fabric}
-                    className="flex items-center gap-3 text-gray-400"
+                    className="flex items-center gap-3 text-muted"
                   >
                     <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                     {fabric}
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl">
+              <p className="mt-6 text-muted leading-relaxed max-w-2xl">
                 Contamos con un catálogo muy extenso de otros tipos de telas y combinaciones; estas son solo las más pedidas. Estamos para ayudarte a encontrar tu tela perfecta.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
               <NextImage
                 src={images.playerasColores}
                 alt="Tipos de tela para playeras"
@@ -172,14 +172,14 @@ export default function PlayerasPage() {
 
       <section className="py-12 md:py-16">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-8">
             Métodos de impresión
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {printMethods.map((method) => (
               <div
                 key={method.name}
-                className="rounded-2xl border border-gray-800 overflow-hidden bg-gray-900/80"
+                className="rounded-2xl border border-border-light overflow-hidden bg-bg-subtle/80"
               >
                 <div className="relative aspect-video bg-gray-800">
                   <NextImage
@@ -191,10 +191,10 @@ export default function PlayerasPage() {
                   />
                 </div>
                 <div className="p-6 md:p-8">
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-semibold text-navy">
                     {method.name}
                   </h3>
-                  <p className="mt-3 text-gray-400 leading-relaxed">
+                  <p className="mt-3 text-muted leading-relaxed">
                     {method.description}
                   </p>
                 </div>
@@ -204,23 +204,23 @@ export default function PlayerasPage() {
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-gray-800">
+      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">
                 Detalles de producción
               </h2>
               <ul className="space-y-3 max-w-2xl">
                 {productionDetails.map((detail, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-400">
+                  <li key={i} className="flex items-start gap-3 text-muted">
                     <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1.5" />
                     {detail}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-subtle border border-border-light">
               <NextImage
                 src={images.playerasModelos[2]}
                 alt="Producción de playeras"
@@ -236,25 +236,25 @@ export default function PlayerasPage() {
 
       <section className="py-12 md:py-16">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
             Amplia variedad a tu medida
           </h2>
-          <p className="text-gray-400 max-w-2xl leading-relaxed">
-            Contamos con una amplia gama de materiales, tipos de tela, cortes, moldes y más. Aquí estamos para ayudarte a hacer tu idea una realidad. <strong className="text-white">Pregúntanos, es gratis.</strong>
+          <p className="text-muted max-w-2xl leading-relaxed">
+            Contamos con una amplia gama de materiales, tipos de tela, cortes, moldes y más. Aquí estamos para ayudarte a hacer tu idea una realidad. <strong className="text-navy">Pregúntanos, es gratis.</strong>
           </p>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-gray-900/80 border border-gray-800 p-8 md:p-12 text-center">
-            <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-bg-subtle/80 border border-border-light p-8 md:p-12 text-center">
+            <p className="text-navy text-sm font-medium uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy">
               ¿Listo para cotizar?
             </h2>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-muted">
               Envíanos tu idea y te respondemos con precios y tiempos.
             </p>
             <div className="mt-8">

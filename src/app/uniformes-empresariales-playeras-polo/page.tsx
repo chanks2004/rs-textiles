@@ -31,10 +31,10 @@ export default function UniformesEmpresarialesPage() {
       <section className="py-16 md:py-24">
         <Container>
           <Breadcrumbs items={[{ label: "Uniformes empresariales y playeras polo", path: "/uniformes-empresariales-playeras-polo" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Uniformes empresariales y playeras polo
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Polos y playeras con bordado o serigrafía para dar imagen profesional a tu empresa. Calidad y entrega a todo México.
           </p>
           <Button href="/cotizar" variant="primary">

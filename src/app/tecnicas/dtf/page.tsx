@@ -37,10 +37,10 @@ export default function DtfPage() {
               { label: "Impresión DTF en playeras", path: "/tecnicas/dtf" },
             ]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Impresión DTF en playeras
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Colores vivos y producción rápida. Ideal para diseños a color y pedidos cortos. Te damos recomendaciones y cuidados.
           </p>
           <Button href="/cotizar" variant="primary">

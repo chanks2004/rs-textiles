@@ -9,17 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#1E3A8A",
-        "primary-dark": "#1e3a5f",
-        cta: "#DC2626",
-        "cta-dark": "#B91C1C",
-        surface: "#111827",
-        "surface-dark": "#0f0f0f",
-        "gray-dark": "#111827",
+        primary: "#1D4ED8",
+        "primary-dark": "#1E40AF",
+        navy: "#0F172A",
+        muted: "#475569",
+        "border-light": "#E2E8F0",
+        "bg-subtle": "#F7FAFC",
+        "bg-subtle-alt": "#F4F8FB",
+        surface: "#F7FAFC",
+        "surface-dark": "#0F172A",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        heading: ["var(--font-heading)", "Georgia", "serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        card: "0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05)",
+        "card-hover": "0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05)",
       },
     },
   },

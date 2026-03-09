@@ -35,7 +35,7 @@ export default function PlayerasMayoreoPage() {
       <section className="py-16 md:py-24">
         <Container>
           <Breadcrumbs items={[{ label: "Playeras personalizadas mayoreo", path: "/playeras-personalizadas-mayoreo" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Playeras personalizadas mayoreo
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mb-10">
@@ -46,19 +46,19 @@ export default function PlayerasMayoreoPage() {
           </Button>
         </Container>
       </section>
-      <section className="py-12 md:py-16 bg-surface border-y border-gray-800">
+      <section className="py-12 md:py-16 bg-surface border-y border-border-light">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Preguntas frecuentes</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-8">Preguntas frecuentes</h2>
           <ul className="space-y-6 max-w-2xl">
             {FAQ_COTIZAR.map((faq) => (
               <li key={faq.question}>
-                <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-navy">{faq.question}</h3>
                 <p className="mt-2 text-gray-400">{faq.answer}</p>
               </li>
             ))}
           </ul>
           <p className="mt-10">
-            <Link href="/cotizar" className="text-white font-medium hover:text-gray-300">
+            <Link href="/cotizar" className="text-navy font-medium hover:text-primary">
               Cotizar ahora
             </Link>
           </p>

@@ -35,21 +35,21 @@ const contactInfo = [
 export default function ContactoPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12 md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center mb-14 md:mb-18">
             <div>
-              <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+              <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
                 Contáctanos
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight">
                 Contacto
               </h1>
-              <p className="mt-6 text-xl text-gray-400 leading-relaxed">
+              <p className="mt-6 text-xl text-muted leading-relaxed">
                 Escríbenos por WhatsApp o email para cotizar o resolver dudas.
               </p>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-subtle border border-border-light shadow-card">
               <NextImage
                 src={images.contacto}
                 alt="Contacto"
@@ -67,14 +67,14 @@ export default function ContactoPage() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 rounded-2xl border border-gray-800 bg-gray-900/80 p-6 hover:border-primary/50 transition-all group"
+                className="flex items-center gap-4 rounded-xl border border-border-light bg-white p-6 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all group"
               >
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/20 text-white group-hover:bg-primary group-hover:text-white transition-colors">
+                <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   {item.icon}
                 </span>
                 <div>
-                  <p className="text-sm font-medium text-gray-500">{item.label}</p>
-                  <p className="font-semibold text-white group-hover:text-gray-300 transition-colors">
+                  <p className="text-sm font-medium text-muted">{item.label}</p>
+                  <p className="font-semibold text-navy group-hover:text-primary transition-colors">
                     {item.value}
                   </p>
                 </div>
@@ -82,10 +82,10 @@ export default function ContactoPage() {
             ))}
           </div>
 
-          <div className="mt-12 p-6 rounded-2xl bg-gray-900/80 border border-gray-800">
-            <p className="text-gray-400">
-              <strong className="text-white">WhatsApp</strong> es la forma más rápida para enviar diseños y recibir una cotización. También puedes usar el formulario de{" "}
-              <a href="/cotizar" className="text-white font-medium hover:text-gray-300">
+          <div className="mt-12 p-6 rounded-xl bg-white border border-border-light shadow-card">
+            <p className="text-muted">
+              <strong className="text-navy">WhatsApp</strong> es la forma más rápida para enviar diseños y recibir una cotización. También puedes usar el formulario de{" "}
+              <a href="/cotizar" className="text-primary font-semibold hover:text-primary-dark">
                 cotización
               </a>{" "}
               si prefieres.

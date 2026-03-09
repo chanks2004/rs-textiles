@@ -31,20 +31,20 @@ export default function FAQPage() {
         ]}
       />
       <FAQPageJsonLd faqs={FAQ_COTIZAR} />
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
           <Breadcrumbs items={[{ label: "Preguntas frecuentes", path: "/faq" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Preguntas frecuentes
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-12">
+          <p className="text-xl text-muted max-w-2xl mb-12">
             Resuelve dudas sobre mínimos, técnicas, tiempos de entrega, envíos y cómo cotizar playeras personalizadas en México.
           </p>
           <ul className="space-y-8 max-w-2xl">
             {FAQ_COTIZAR.map((faq) => (
-              <li key={faq.question} className="border-b border-gray-800 pb-8 last:border-0">
-                <h2 className="text-xl font-semibold text-white">{faq.question}</h2>
-                <p className="mt-3 text-gray-400">{faq.answer}</p>
+              <li key={faq.question} className="border-b border-border-light pb-8 last:border-0">
+                <h2 className="text-xl font-semibold text-navy">{faq.question}</h2>
+                <p className="mt-3 text-muted">{faq.answer}</p>
               </li>
             ))}
           </ul>

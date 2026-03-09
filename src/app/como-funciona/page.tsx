@@ -36,33 +36,33 @@ const steps = [
 export default function ComoFuncionaPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
-          <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
             Proceso
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight">
             Cómo funciona
           </h1>
-          <p className="mt-6 text-xl text-gray-400 leading-relaxed max-w-3xl">
+          <p className="mt-6 text-xl text-muted leading-relaxed max-w-3xl">
             Desde tu idea hasta la entrega: te guiamos en cada paso.
           </p>
         </Container>
       </section>
 
-      <section className="py-12 md:py-16 bg-surface border-y border-gray-800">
+      <section className="py-16 md:py-20 bg-bg-subtle">
         <Container>
-          <div className="max-w-3xl space-y-12 md:space-y-16">
+          <div className="max-w-3xl space-y-14 md:space-y-16">
             {steps.map((step, index) => (
-              <div key={step.title} className="relative pl-8 md:pl-12 border-l-2 border-primary/50">
+              <div key={step.title} className="relative pl-8 md:pl-12 border-l-2 border-primary/40">
                 <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
-                <span className="text-sm font-semibold text-white">
+                <span className="text-sm font-semibold text-primary">
                   Paso {index + 1}
                 </span>
-                <h2 className="mt-1 text-2xl font-bold text-white">
+                <h2 className="mt-1 text-2xl font-bold text-navy">
                   {step.title}
                 </h2>
-                <p className="mt-4 text-gray-400 leading-relaxed">
+                <p className="mt-4 text-muted leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -71,16 +71,16 @@ export default function ComoFuncionaPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-gray-900/80 border border-gray-800 p-8 md:p-12 text-center">
-            <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden bg-white border border-border-light shadow-card p-8 md:p-12 text-center">
+            <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy">
               ¿Listo para empezar?
             </h2>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-muted">
               Envíanos los datos de tu pedido y te respondemos con una cotización.
             </p>
             <div className="mt-8">

@@ -21,12 +21,12 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0f0f0f]/95 backdrop-blur border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border-light shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="font-heading text-xl md:text-2xl font-semibold text-white tracking-tight"
+            className="font-heading text-xl md:text-2xl font-bold text-navy tracking-tight"
           >
             RS Textiles
           </Link>
@@ -38,8 +38,8 @@ export function Header() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? "text-white"
-                    : "text-gray-400 hover:text-white"
+                    ? "text-primary"
+                    : "text-muted hover:text-navy"
                 }`}
               >
                 {link.label}
@@ -47,23 +47,23 @@ export function Header() {
             ))}
             <Link
               href="/cotizar"
-              className="ml-4 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors"
+              className="ml-4 px-5 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors shadow-sm"
             >
-              Cotizar
+              Solicitar cotización
             </Link>
           </nav>
 
           <div className="flex items-center gap-4 md:hidden">
             <Link
               href="/cotizar"
-              className="px-4 py-2 rounded-full bg-primary text-white text-sm font-medium hover:bg-primary-dark"
+              className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold"
             >
               Cotizar
             </Link>
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white"
+              className="p-2 rounded-lg text-muted hover:bg-bg-subtle hover:text-navy"
               aria-label="Menú"
             >
               <svg
@@ -93,15 +93,17 @@ export function Header() {
         </div>
 
         {menuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-800">
-            <ul className="flex flex-col gap-2">
+          <nav className="md:hidden py-4 border-t border-border-light">
+            <ul className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block py-2 text-sm font-medium ${
-                      pathname === link.href ? "text-white" : "text-gray-400"
+                    className={`block py-2.5 px-3 text-sm font-medium rounded-lg ${
+                      pathname === link.href
+                        ? "text-primary bg-primary/10"
+                        : "text-muted hover:bg-bg-subtle hover:text-navy"
                     }`}
                   >
                     {link.label}

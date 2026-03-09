@@ -32,13 +32,13 @@ export default function BlogIndexPage() {
           { name: "Blog", path: "/blog" },
         ]}
       />
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
           <Breadcrumbs items={[{ label: "Blog", path: "/blog" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Blog para marcas de ropa y empresas
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Artículos escritos para quienes quieren lanzar, hacer crecer o profesionalizar su marca de ropa y sus
             pedidos de playeras personalizadas en México.
           </p>
@@ -47,18 +47,18 @@ export default function BlogIndexPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="rounded-2xl border border-gray-800 bg-surface/60 p-6 hover:border-primary/70 transition-colors"
+                className="rounded-xl border border-border-light bg-white shadow-card p-6 hover:shadow-card-hover hover:border-primary/30 transition-all"
               >
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary mb-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2">
                   {post.category}
                 </p>
-                <h2 className="text-lg md:text-xl font-semibold text-white mb-2">
+                <h2 className="text-lg md:text-xl font-semibold text-navy mb-2">
                   <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="text-sm text-gray-400 mb-4">{post.description}</p>
-                <p className="text-xs text-gray-500 mb-4">
+                <p className="text-sm text-muted mb-4">{post.description}</p>
+                <p className="text-xs text-muted mb-4">
                   {new Date(post.date).toLocaleDateString("es-MX", {
                     year: "numeric",
                     month: "short",

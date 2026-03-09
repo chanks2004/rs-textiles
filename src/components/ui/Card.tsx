@@ -23,7 +23,7 @@ export function Card({
   const content = (
     <>
       {imageSrc && (
-        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-800 border border-gray-700 mb-4">
+        <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-bg-subtle border border-border-light mb-5">
           <NextImage
             src={imageSrc}
             alt={imageAlt ?? title}
@@ -33,9 +33,9 @@ export function Card({
           />
         </div>
       )}
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <h3 className="text-xl font-semibold text-navy">{title}</h3>
       {description && (
-        <p className="mt-2 text-gray-400 text-sm leading-relaxed">
+        <p className="mt-2 text-muted text-sm leading-relaxed">
           {description}
         </p>
       )}
@@ -43,13 +43,13 @@ export function Card({
     </>
   );
 
-  const wrapperClass = `rounded-2xl bg-gray-900/80 border border-gray-800 p-6 md:p-8 hover:border-primary/50 transition-all ${className}`;
+  const wrapperClass = `rounded-xl bg-white border border-border-light p-6 md:p-8 shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all duration-200 ${className}`;
 
   if (href) {
     return (
       <Link href={href} className={`block ${wrapperClass}`}>
         {content}
-        <span className="mt-4 inline-flex items-center text-white font-medium text-sm hover:text-gray-300">
+        <span className="mt-4 inline-flex items-center text-primary font-semibold text-sm">
           Ver más
           <svg
             className="ml-1 w-4 h-4"

@@ -52,7 +52,7 @@ export default function BlogPostPage({ params }: Props) {
         description={post.description}
         datePublished={post.date}
       />
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
           <Breadcrumbs
             items={[
@@ -60,18 +60,18 @@ export default function BlogPostPage({ params }: Props) {
               { label: post.title, path },
             ]}
           />
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary mb-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
             {post.category}
           </p>
-          <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">{post.title}</h1>
-          <p className="text-sm text-gray-500 mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-navy leading-tight mb-4">{post.title}</h1>
+          <p className="text-sm text-muted mb-8">
             {new Date(post.date).toLocaleDateString("es-MX", {
               year: "numeric",
               month: "long",
               day: "2-digit",
             })}
           </p>
-          <div className="prose prose-invert prose-p:text-gray-300 prose-headings:text-white max-w-2xl">
+          <div className="prose prose-slate prose-p:text-muted prose-headings:text-navy max-w-2xl">
             {post.content.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
             ))}

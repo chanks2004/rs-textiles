@@ -31,10 +31,10 @@ export default function PlayerasParaEventosPage() {
       <section className="py-16 md:py-24">
         <Container>
           <Breadcrumbs items={[{ label: "Playeras para eventos", path: "/playeras-para-eventos" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Playeras para eventos
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Carreras, graduaciones, despedidas y equipos: paquetes por cantidad, tiempos claros y envíos a todo México.
           </p>
           <Button href="/cotizar" variant="primary">

@@ -37,10 +37,10 @@ export default function BordadoPage() {
               { label: "Bordado en playeras y polos", path: "/tecnicas/bordado" },
             ]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Bordado en playeras y polos
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Acabado premium para uniformes y marcas. Te explicamos cuándo conviene el bordado y cómo asegurar calidad en tu pedido.
           </p>
           <Button href="/cotizar" variant="primary">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbListJsonLd } from "@/components/seo/JsonLd";
+import { SectionDivider } from "@/components/SectionDivider";
 import { images } from "@/lib/images";
 import { SITE_URL } from "@/lib/site";
 import Link from "next/link";
@@ -40,7 +41,7 @@ const steps = [
     number: "03",
     title: "Te entregamos tu pedido",
     description:
-      "Coordinar la producción y entrega para que recibas tu pedido a tiempo.",
+      "Coordinamos la producción y entrega para que recibas tu pedido a tiempo.",
   },
 ];
 
@@ -96,26 +97,30 @@ export default function HomePage() {
   return (
     <>
       <BreadcrumbListJsonLd items={[{ name: "Inicio", path: "/" }]} />
-      <section className="py-16 md:py-24 lg:py-32">
+      {/* Hero */}
+      <section className="py-20 md:py-28 lg:py-36">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <div>
-              <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+              <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4">
                 Prendas personalizadas
               </p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-tight tracking-tight">
                 Playeras personalizadas en México
               </h1>
-              <p className="mt-6 text-xl md:text-2xl text-gray-400 leading-relaxed">
-                Cotiza directamente con fabricantes confiables
+              <p className="mt-6 text-xl md:text-2xl text-muted leading-relaxed">
+                Soluciones textiles para marcas y empresas. Cotiza con fabricantes confiables y recibe tu pedido a tiempo.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4">
                 <Button href="/cotizar" variant="primary">
-                  Cotizar ahora
+                  Solicitar cotización
+                </Button>
+                <Button href="/playeras" variant="outline">
+                  Ver productos
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light shadow-card">
               <NextImage
                 src={images.hero}
                 alt="Playeras y prendas personalizadas"
@@ -129,30 +134,33 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-surface border-y border-gray-800">
+      <SectionDivider />
+
+      {/* Process - bloque azul */}
+      <section className="py-20 md:py-28 bg-primary">
         <Container>
-          <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
             Proceso
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Cómo funciona
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mb-12">
+          <p className="text-lg text-white/90 max-w-2xl mb-14">
             Tres pasos para conseguir tu pedido de prendas personalizadas.
           </p>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="relative rounded-2xl bg-gray-900/80 border border-gray-800 p-6 md:p-8"
+                className="rounded-xl bg-white/10 border border-white/20 backdrop-blur p-6 md:p-8 hover:bg-white/15 transition-all duration-200"
               >
-                <span className="text-5xl font-bold text-white">
+                <span className="text-4xl md:text-5xl font-bold text-white">
                   {step.number}
                 </span>
-                <h3 className="mt-2 text-xl font-semibold text-white">
+                <h3 className="mt-4 text-xl font-semibold text-white">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-gray-400 leading-relaxed">
+                <p className="mt-3 text-white/90 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -161,26 +169,30 @@ export default function HomePage() {
           <div className="mt-12">
             <Link
               href="/como-funciona"
-              className="text-white font-medium hover:text-gray-300 transition-colors"
+              className="text-white font-semibold hover:text-white/90 transition-colors inline-flex items-center gap-1"
             >
-              Ver proceso completo →
+              Ver proceso completo
+              <span aria-hidden>→</span>
             </Link>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <SectionDivider />
+
+      {/* Catalog */}
+      <section className="py-20 md:py-28">
         <Container>
-          <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+          <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
             Catálogo
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
             Productos
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mb-12">
+          <p className="text-lg text-muted max-w-2xl mb-14">
             Prendas personalizadas para marcas, eventos y equipos.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
               <Card
                 key={product.title}
@@ -195,42 +207,48 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-surface border-y border-gray-800">
+      <SectionDivider />
+
+      {/* Stats / Trust - bloque azul */}
+      <section className="py-20 md:py-28 bg-primary">
         <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-14 text-center">
             Producción a tu medida
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="text-center rounded-2xl bg-gray-900/80 p-8 border border-gray-800"
+                className="text-center rounded-xl bg-white/10 border border-white/20 backdrop-blur p-8 hover:bg-white/15 transition-all duration-200"
               >
                 <p className="text-2xl md:text-3xl font-bold text-white">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-gray-400 font-medium">{stat.label}</p>
+                <p className="mt-2 text-white/90 font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <SectionDivider />
+
+      {/* Testimonials */}
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center mb-14">
             <div>
-              <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+              <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
                 Testimonios
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
                 Lo que dicen nuestros clientes
               </h2>
-              <p className="text-lg text-gray-400 max-w-2xl">
+              <p className="text-lg text-muted max-w-2xl">
                 Marcas y empresas que ya confían en nosotros.
               </p>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-bg-subtle border border-border-light shadow-card">
               <NextImage
                 src={images.testimonials}
                 alt="Clientes satisfechos"
@@ -244,14 +262,14 @@ export default function HomePage() {
             {testimonials.map((t) => (
               <blockquote
                 key={t.author}
-                className="rounded-2xl bg-gray-900/80 border border-gray-800 p-6 md:p-8"
+                className="rounded-xl bg-white border border-border-light p-6 md:p-8 shadow-card"
               >
-                <p className="text-gray-300 leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-muted leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
                 <footer className="mt-4">
-                  <cite className="font-semibold text-white not-italic">
+                  <cite className="font-semibold text-navy not-italic">
                     {t.author}
                   </cite>
-                  <span className="text-gray-500 text-sm"> — {t.role}</span>
+                  <span className="text-muted text-sm"> — {t.role}</span>
                 </footer>
               </blockquote>
             ))}
@@ -259,22 +277,28 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-surface border-t border-gray-800">
+      <SectionDivider />
+
+      {/* CTA */}
+      <section className="py-20 md:py-28 bg-primary">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+            <p className="text-white/90 text-sm font-semibold uppercase tracking-[0.2em] mb-3">
               Cotización
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Cotiza tu pedido hoy
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
+            <p className="mt-4 text-lg text-white/90">
               Envíanos los detalles y te respondemos con una cotización sin compromiso.
             </p>
             <div className="mt-10">
-              <Button href="/cotizar" variant="primary">
+              <Link
+                href="/cotizar"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-semibold bg-white text-primary hover:bg-white/95 transition-colors shadow-sm"
+              >
                 Solicitar cotización
-              </Button>
+              </Link>
             </div>
           </div>
         </Container>

@@ -32,10 +32,10 @@ export default function PlayerasPersonalizadasPage() {
       <section className="py-16 md:py-24">
         <Container>
           <Breadcrumbs items={[{ label: "Playeras personalizadas", path: "/playeras-personalizadas" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight mb-6">
             Playeras personalizadas
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mb-10">
+          <p className="text-xl text-muted max-w-2xl mb-10">
             Para marcas, negocios y eventos. Elige técnica (serigrafía, DTF, bordado), calidad y tiempos de entrega. Cotiza fácil con RZ Textiles.
           </p>
           <div className="flex flex-wrap gap-4">

@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 export default function NosotrosPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <div>
-              <p className="text-white text-sm font-medium uppercase tracking-[0.2em] mb-3">
+              <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-3">
                 Quiénes somos
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-navy leading-tight">
                 Nosotros
               </h1>
-              <div className="mt-8 space-y-6 text-lg text-gray-400 leading-relaxed">
+              <div className="mt-8 space-y-6 text-lg text-muted leading-relaxed">
                 <p>
                   Somos un intermediario textil que conecta marcas y empresas con fabricantes confiables. Nos encargamos de conseguir la mejor calidad, precio y tiempos de entrega.
                 </p>
@@ -40,7 +40,7 @@ export default function NosotrosPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-900 border border-gray-800">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-bg-subtle border border-border-light shadow-card">
               <NextImage
                 src={images.nosotros}
                 alt="Equipo RS Textiles"

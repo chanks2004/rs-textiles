@@ -1,5 +1,6 @@
 /** URLs de imágenes (Unsplash). Sustituir por tus propias fotos en producción. */
 export const images = {
+  logoRs: "/images/rs-logo.png",
   hero: "/images/hero-principal.png",
   howItWorks: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80",
   productShirts: "/images/playeras/playeras-modelo-1.png",

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import NextImage from "next/image";
+import { images } from "@/lib/images";
 
 const footerLinks = [
   { href: "/playeras", label: "Playeras" },
@@ -14,15 +16,20 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-bg-subtle border-t border-border-light mt-auto">
+    <footer className="bg-white border-t border-border-light mt-auto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-2">
-            <Link
-              href="/"
-              className="font-heading text-lg font-bold text-navy"
-            >
-              RS Textiles
+            <Link href="/" className="inline-flex items-center gap-3">
+              <div className="relative h-12 w-32">
+                <NextImage
+                  src={images.logoRs}
+                  alt="RS Textiles logo"
+                  fill
+                  className="object-contain"
+                  sizes="112px"
+                />
+              </div>
             </Link>
             <p className="mt-3 text-sm text-muted max-w-sm leading-relaxed">
               Soluciones textiles y de prendas personalizadas para marcas y empresas. Conectamos tu proyecto con producción confiable en México.
